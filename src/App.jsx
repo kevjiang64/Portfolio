@@ -14,11 +14,11 @@ const App = () => (
     <Navbar />
     <Hero />
     <ShowcaseSection />
-    <LogoShowcase />
-    <FeatureCards />
+    {/* <LogoShowcase /> */}
+    {/* <FeatureCards /> */}
     <Experience />
     <TechStack />
-    <Testimonials />
+    {/* <Testimonials /> */}
     <Contact />
     <Footer />
   </>

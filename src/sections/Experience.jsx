@@ -104,11 +104,11 @@ const Experience = () => {
             {expCards.map((card) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
-                  <GlowCard card={card}>
+                  {/* <GlowCard card={card}>
                     <div>
-                      <img src={card.imgPath} alt="exp-img" />
+                      <img src={"../../public/images/chat.png"} alt="exp-img" />
                     </div>
-                  </GlowCard>
+                  </GlowCard> */}
                 </div>
                 <div className="xl:w-4/6">
                   <div className="flex items-start">
@@ -118,7 +118,7 @@ const Experience = () => {
                     </div>
                     <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
                       <div className="timeline-logo">
-                        <img src={card.logoPath} alt="logo" />
+                        {/* <img src={card.logoPath} /> */}
                       </div>
                       <div>
                         <h1 className="font-semibold text-3xl">{card.title}</h1>
@@ -126,7 +126,7 @@ const Experience = () => {
                           🗓️&nbsp;{card.date}
                         </p>
                         <p className="text-[#839CB5] italic">
-                          Responsibilities
+                          {card.companyName}
                         </p>
                         <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
                           {card.responsibilities.map(

@@ -1,6 +1,6 @@
 const navLinks = [
   {
-    name: "Work",
+    name: "Projects",
     link: "#work",
   },
   {
@@ -10,10 +10,6 @@ const navLinks = [
   {
     name: "Skills",
     link: "#skills",
-  },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
   },
 ];
 
@@ -28,12 +24,12 @@ const words = [
   { text: "Code", imgPath: "/images/code.svg" },
 ];
 
-const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
-];
+// const counterItems = [
+//   { value: 15, suffix: "+", label: "Years of Experience" },
+//   { value: 200, suffix: "+", label: "Satisfied Clients" },
+//   { value: 108, suffix: "+", label: "Completed Projects" },
+//   { value: 90, suffix: "%", label: "Client Retention Rate" },
+// ];
 
 const logoIconsList = [
   {
@@ -91,24 +87,40 @@ const abilities = [
 
 const techStackImgs = [
   {
-    name: "React Developer",
+    name: "React.js",
     imgPath: "/images/logos/react.png",
   },
   {
-    name: "Python Developer",
+    name: "C#.NET",
+    imgPath: "/images/logos/csharp.png",
+  },
+  {
+    name: "Python",
     imgPath: "/images/logos/python.svg",
   },
   {
-    name: "Backend Developer",
+    name: "Node.js",
     imgPath: "/images/logos/node.png",
   },
   {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
+    name: "Tailwind",
+    imgPath: "/images/logos/tailwind.png",
   },
   {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
+    name: "Html",
+    imgPath: "/images/logos/html.png",
+  },
+  {
+    name: "GraphQL",
+    imgPath: "/images/logos/graphql.png",
+  },
+  {
+    name: "MongoDb",
+    imgPath: "/images/logos/mongodb.png",
+  },
+  {
+    name: "Vue.js",
+    imgPath: "/images/logos/vue.png",
   },
 ];
 
@@ -147,39 +159,52 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    companyName: "Matrox Electronics Systems",
+    title: "Validation Specialist FPGA intern",
+    date: "September 2019 - December 2019",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Developed a Perl script that would dispatch Unix jobs faster, achieving a 50% time reduction in process time.",
+      "Developed a command-line application with various options to launch Unix jobs remotely helping daily administrative tasks.",
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    companyName: "Consoltec",
+    title: "Web Developer Intern",
+    date: "May 2020 - September 2020",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Developed and maintained the front end of a language translation project management tool.",
+      "Integrated a client-side feature to provide the users multiple choices to save files.",
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    companyName: "Conova",
+    title: "Web Developer",
+    date: "January 2021 - January 2022",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Implemented a Video on Demand System to provide a way for users to record themselves.",
+      "Designed and implemented the database using GraphQL schemas to collect information throughout our application in an ordered and sophistiscated manner.",
+      "Introduced Auth0, a third-party authentication service, into the application.",
+      "Implemented an IP address blacklisting service to block harmful users.",
+    ],
+  },
+  {
+    companyName: "Broadsign International",
+    title: "Software Developer",
+    date: "January 2022 - April 2023",
+    responsibilities: [
+      "Developed the full stack integrations of multiple features through microservices following the TDD approach, achieving major speed improvements, including 50% reduction in time for deployments.",
+      "Built and maintained robust CI/CD pipelines for new and existing applications, resulting in 20% improvement for deployment speed.",
+      "Created comprehensive Datadog dashboards for front end microservices as well as monitoring real-time analytics and insights on Confluent Cloud.",
+      "Demonstrated strong customer support and assistance by resolving 90% of all technical issues within a week.",
+    ],
+  },
+  {
+    companyName: "TriNmax Inc",
+    title: "Full-Stack Developer",
+    date: "October 2023 - December 2023",
+    responsibilities: [
+      "Maintaned and developed the front end of a bill management software embedded on IBM Maximo application suite.",
+      "Configured Google Cloud project settings using Terraform, an infrastructure-as-code software tool.",
     ],
   },
 ];
@@ -246,19 +271,13 @@ const testimonials = [
 
 const socialImgs = [
   {
-    name: "insta",
-    imgPath: "/images/insta.png",
-  },
-  {
-    name: "fb",
-    imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
+    name: "github",
+    url: "https://github.com/kevjiang64",
+    imgPath: "/images/git.svg",
   },
   {
     name: "linkedin",
+    url: "https://www.linkedin.com/in/kevin-jiang-6009/",
     imgPath: "/images/linkedin.png",
   },
 ];
@@ -267,7 +286,7 @@ export {
   words,
   abilities,
   logoIconsList,
-  counterItems,
+  // counterItems,
   expCards,
   expLogos,
   testimonials,

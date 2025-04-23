@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import TitleHeader from "../components/TitleHeader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,24 +47,27 @@ const AppShowcase = () => {
   return (
     <div id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
-        <div className="showcaselayout">
+        <TitleHeader title="Projects" sub="💻 Self-learning with Coding " />
+        <div className="showcaselayout pt-10">
           <div ref={rydeRef} className="first-project-wrapper">
             <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde App Interface" />
+              <a href="https://chatty-ze95.onrender.com/">
+                <img src="/images/chatty.png" />
+              </a>
             </div>
             <div className="text-content">
               <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Ryde
+                Chatty - A Full Stack Conversation Application using Web Sockets
+                to enable Live-Time Message Notifications
               </h2>
               <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
+                An app built with React, Typescrpt, TailwindCSS and Node.js for
+                a fast, user-friendly chat experience.
               </p>
             </div>
           </div>
 
-          <div className="project-list-wrapper overflow-hidden">
+          {/* <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
                 <img
@@ -80,7 +84,7 @@ const AppShowcase = () => {
               </div>
               <h2>YC Directory - A Startup Showcase App</h2>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
