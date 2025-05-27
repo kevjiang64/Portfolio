@@ -67,6 +67,24 @@ const AppShowcase = () => {
             </div>
           </div>
 
+          <div ref={rydeRef} className="first-project-wrapper">
+            <div className="image-wrapper">
+              <a href="https://chatty-ze95.onrender.com/">
+                <img src="/images/finshark.png" />
+              </a>
+            </div>
+            <div className="text-content">
+              <h2>
+                FinShark - A Full Stack Stock Research Application to visualize
+                crucial Stock Details
+              </h2>
+              <p className="text-white-50 md:text-xl">
+                An app built with C# .NET 8, React.js and TailwindCSS for stock
+                viewing.
+              </p>
+            </div>
+          </div>
+
           {/* <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
