@@ -69,7 +69,7 @@ const AppShowcase = () => {
 
           <div ref={rydeRef} className="first-project-wrapper">
             <div className="image-wrapper">
-              <a href="https://chatty-ze95.onrender.com/">
+              <a href="https://github.com/kevjiang64/Finshark">
                 <img src="/images/finshark.png" />
               </a>
             </div>
@@ -81,6 +81,24 @@ const AppShowcase = () => {
               <p className="text-white-50 md:text-xl">
                 An app built with C# .NET 8, React.js and TailwindCSS for stock
                 viewing.
+              </p>
+            </div>
+          </div>
+
+          <div ref={rydeRef} className="first-project-wrapper">
+            <div className="image-wrapper">
+              <a href="https://plan-for-me.vercel.app/">
+                <img src="/images/planforme.png" />
+              </a>
+            </div>
+            <div className="text-content">
+              <h2>
+                Plan For Me - A Full Stack Application Generating Personnalized
+                Itineraties for Vacation
+              </h2>
+              <p className="text-white-50 md:text-xl">
+                An app built with React, FireBase, TailwindCSS and Gemini API to
+                faciliate vacation planning.
               </p>
             </div>
           </div>
