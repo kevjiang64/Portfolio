@@ -103,6 +103,25 @@ const AppShowcase = () => {
             </div>
           </div>
 
+          <div ref={rydeRef} className="first-project-wrapper">
+            <div className="image-wrapper">
+              <a href="https://puter.com/app/resumeats">
+                <img src="/images/resumeAts.png" />
+              </a>
+            </div>
+            <div className="text-content">
+              <h2>
+                ResumeATS - An AI Full Stack Application Reviewing Resumes using
+                Claude
+              </h2>
+              <p className="text-white-50 md:text-xl">
+                An app built with React, Puter, TailwindCSS, Typescript and
+                Zustand to provide feedback on resumes for specific job
+                applications.
+              </p>
+            </div>
+          </div>
+
           {/* <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
