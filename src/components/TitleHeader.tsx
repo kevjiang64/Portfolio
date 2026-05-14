@@ -29,6 +29,7 @@ const TitleHeader = ({ title }: TitleHeaderProps) => {
           duration: 0.9,
           ease: "power4.out",
           scrollTrigger: { trigger: ref.current, start: "top 88%" },
+          onComplete: () => gsap.set(ref.current, { clearProps: "clipPath" }),
         }
       );
     },

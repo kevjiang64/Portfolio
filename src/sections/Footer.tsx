@@ -33,8 +33,7 @@ const Footer = () => {
         defaults: { ease: "power3.out" },
       });
 
-      tl.fromTo(".footer-brand",   { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 })
-        .fromTo(".footer-nav-item", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.07 }, "-=0.3")
+      tl.fromTo(".footer-nav-item", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.07 })
         .fromTo(".footer-social",   { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.4, stagger: 0.1, ease: "back.out(2)" }, "-=0.3")
         .fromTo(".footer-copy",     { opacity: 0 }, { opacity: 1, duration: 0.5 }, "-=0.1");
     },
@@ -48,16 +47,10 @@ const Footer = () => {
 
   return (
     <footer ref={containerRef} className="footer">
-      <div className="footer-inner">
-        {/* Left: brand + tagline */}
-        <div className="footer-brand opacity-0 flex flex-col gap-1.5">
-          <span className="text-white font-bold text-lg tracking-tight">Kevin Jiang</span>
-          <p className="text-zinc-500 text-sm">Full-Stack Developer · Montreal, QC</p>
-        </div>
-
-        {/* Center: nav links */}
+      <div className="footer-inner !flex-col !items-center !justify-center gap-6">
+        {/* Nav links */}
         <nav aria-label="Footer navigation">
-          <ul className="flex gap-6">
+          <ul className="flex flex-wrap justify-center gap-6">
             {navLinks.map(({ name, link }) => (
               <li key={name} className="footer-nav-item opacity-0">
                 <a
@@ -71,8 +64,7 @@ const Footer = () => {
             ))}
             <li className="footer-nav-item opacity-0">
               <a
-                href="#contact"
-                onClick={(e) => handleNavClick(e, "#contact")}
+                href="mailto:kevinjiang64@hotmail.com"
                 className="text-sm text-zinc-500 hover:text-white transition-colors duration-200"
               >
                 Contact
@@ -81,30 +73,28 @@ const Footer = () => {
           </ul>
         </nav>
 
-        {/* Right: socials + built-with */}
-        <div className="flex flex-col items-start md:items-end gap-3">
-          <div className="flex items-center gap-3">
-            {socialLinks.map(({ name, url }) => {
-              const Icon = ICONS[name];
-              return (
-                <a
-                  key={name}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={name}
-                  className="footer-social opacity-0 text-zinc-500 hover:text-white transition-colors duration-200"
-                >
-                  {Icon && <Icon />}
-                </a>
-              );
-            })}
-          </div>
+        {/* Socials */}
+        <div className="flex items-center gap-4">
+          {socialLinks.map(({ name, url }) => {
+            const Icon = ICONS[name];
+            return (
+              <a
+                key={name}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={name}
+                className="footer-social opacity-0 text-zinc-500 hover:text-white transition-colors duration-200"
+              >
+                {Icon && <Icon />}
+              </a>
+            );
+          })}
         </div>
       </div>
 
       {/* Copyright bar */}
-      <div className="footer-copy opacity-0 px-5 md:px-10 lg:px-20 pb-6">
+      <div className="footer-copy opacity-0 text-center px-5 md:px-10 lg:px-20 pb-6">
         <p className="text-zinc-700 text-xs">
           © {new Date().getFullYear()} Kevin Jiang. All rights reserved.
         </p>

@@ -33,7 +33,7 @@ const Skills = () => {
   return (
     <section id="skills" className="section-padding overflow-hidden" ref={containerRef}>
       <div className="flex flex-col gap-14">
-        <TitleHeader title="Technical Skills 🛠️" />
+        <TitleHeader title="Technical Skills" />
 
         <div className="flex flex-col gap-8">
           {skillGroups.map((group, groupIdx) => {
@@ -55,17 +55,17 @@ const Skills = () => {
                   <div className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10"
                        style={{ background: "linear-gradient(to left, #080810, transparent)" }} />
 
-                  <div className={`marquee-track ${direction}`} style={{ gap: "2rem" }}>
+                  <div className={`marquee-track ${direction}`} style={{ gap: "4rem" }}>
                     {repeated.map((skill, idx) => (
                       <div
                         key={`${skill.name}-${idx}`}
-                        className="flex-shrink-0 flex flex-col items-center gap-2 group/logo"
+                        className="flex-shrink-0 flex flex-col items-center gap-2.5 group/logo"
                         title={skill.name}
                       >
-                        <div className="w-14 h-14 flex items-center justify-center rounded-2xl
+                        <div className="w-28 h-28 flex items-center justify-center rounded-2xl
                                         bg-white/[0.05] border border-white/10
                                         group-hover/logo:border-indigo-500/40 group-hover/logo:bg-indigo-500/10
-                                        transition-all duration-300 p-3">
+                                        transition-all duration-300 p-5">
                           {skill.iconPath && (
                             <img
                               src={skill.iconPath}
@@ -76,7 +76,7 @@ const Skills = () => {
                             />
                           )}
                         </div>
-                        <span className="text-[11px] text-zinc-600 group-hover/logo:text-zinc-400
+                        <span className="text-xs text-zinc-600 group-hover/logo:text-zinc-400
                                          transition-colors duration-300 font-medium">
                           {skill.name}
                         </span>

@@ -47,7 +47,7 @@ const Projects = () => {
   return (
     <section id="work" className="section-padding" ref={containerRef}>
       <div className="flex flex-col gap-16">
-        <TitleHeader title="Coding Projects 💻" sub="What I've Built" />
+        <TitleHeader title="Coding Projects" sub="What I've Built" />
 
         <div className="flex flex-col gap-8 max-w-5xl mx-auto w-full">
           {projects.map((project) => (
@@ -63,21 +63,34 @@ const Projects = () => {
                 const x = (e.clientX - rect.left) / rect.width  - 0.5;
                 const y = (e.clientY - rect.top)  / rect.height - 0.5;
                 e.currentTarget.style.transform =
-                  `perspective(900px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg) translateZ(6px)`;
+                  `perspective(1100px) rotateX(${-y * 3.5}deg) rotateY(${x * 3.5}deg) translateZ(4px)`;
                 e.currentTarget.style.transition = "transform 0.08s ease-out";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform =
-                  "perspective(900px) rotateX(0deg) rotateY(0deg) translateZ(0px)";
+                  "perspective(1100px) rotateX(0deg) rotateY(0deg) translateZ(0px)";
                 e.currentTarget.style.transition = "transform 0.55s ease-out";
               }}
             >
               {/* Screenshot or placeholder */}
-              <div className="md:w-[45%] overflow-hidden flex-shrink-0 bg-white/[0.03]">
+              <div className="md:w-[45%] overflow-hidden flex-shrink-0 bg-white/[0.03] relative">
+                {/* Live badge */}
+                {project.liveUrl && (
+                  <span className="absolute top-3 left-3 z-10 flex items-center gap-1.5
+                                   px-2.5 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider
+                                   bg-green-500/15 border border-green-500/40 text-green-300 backdrop-blur-sm">
+                    <span className="relative flex w-1.5 h-1.5">
+                      <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-75" />
+                      <span className="relative rounded-full w-1.5 h-1.5 bg-green-400" />
+                    </span>
+                    Live
+                  </span>
+                )}
                 {project.image ? (
                   <img
                     src={project.image}
                     alt={project.imageAlt}
+                    loading="lazy"
                     className="w-full h-52 md:h-full object-cover
                                group-hover:scale-[1.03] transition-transform duration-700"
                   />
@@ -119,15 +132,17 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Links */}
-                <div className="flex items-center gap-4 pt-2">
+                {/* Links — proper buttons with clear primary/secondary hierarchy */}
+                <div className="flex items-center gap-3 pt-2 flex-wrap">
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-white
-                                 hover:text-indigo-400 transition-colors duration-200"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg
+                                 bg-indigo-600 hover:bg-indigo-500
+                                 text-white text-sm font-semibold
+                                 active:scale-[0.97] transition-all duration-200"
                       aria-label={`Live demo of ${project.title}`}
                     >
                       <ExternalLinkIcon />
@@ -139,8 +154,11 @@ const Projects = () => {
                       href={project.repoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-zinc-400
-                                 hover:text-white transition-colors duration-200"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg
+                                 border border-white/15 bg-white/[0.03] hover:bg-white/[0.08]
+                                 hover:border-white/30 text-zinc-300 hover:text-white
+                                 text-sm font-semibold
+                                 active:scale-[0.97] transition-all duration-200"
                       aria-label={`GitHub repository of ${project.title}`}
                     >
                       <GitHubIcon />

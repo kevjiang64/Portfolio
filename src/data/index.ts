@@ -58,8 +58,8 @@ export const projects: Project[] = [
     summary:
       "Built and deployed a full-stack rental platform on AWS supporting scalable property listing and user workflows, with a modern UI and server-side rendering via Next.js.",
     tags: ["Next.js", "Tailwind CSS", "AWS", "Shadcn UI", "Prisma", "Node.js", "Redux"],
-    image: "",
-    imageAlt: "Rentiful screenshot",
+    image: "/images/rentiful.png",
+    imageAlt: "Rentiful rental housing platform",
     repoUrl: "https://github.com/kevjiang64/Rentiful",
   },
   {
@@ -69,9 +69,10 @@ export const projects: Project[] = [
     summary:
       "Developed an AI-powered travel itinerary generator using the Gemini API to create personalized vacation plans, with real-time data and cloud hosting on GCP.",
     tags: ["React", "Firebase", "Tailwind CSS", "Gemini API", "GCP"],
-    image: "",
-    imageAlt: "PlanForMe screenshot",
+    image: "/images/planforme.png",
+    imageAlt: "PlanForMe AI travel planner",
     liveUrl: "https://plan-for-me.vercel.app",
+    repoUrl: "https://github.com/kevjiang64/PlanForMe",
   },
   {
     id: "tennis-predictor",
@@ -80,8 +81,8 @@ export const projects: Project[] = [
     summary:
       "Built a machine learning model using logistic regression and Markov chain analysis to predict tennis match outcomes, leveraging an 800 MB dataset of 2M+ matches processed with PySpark.",
     tags: ["Python", "Scikit-learn", "NumPy", "PySpark", "Pandas"],
-    image: "",
-    imageAlt: "Tennis Match Winner Predictor screenshot",
+    image: "/images/tennis-predictor.png",
+    imageAlt: "Tennis Match Winner Predictor ML model",
     repoUrl: "https://github.com/kevjiang64/SOEN471",
   },
   {
@@ -91,8 +92,8 @@ export const projects: Project[] = [
     summary:
       "A full-stack chat platform with WebSocket-powered live messaging, online presence indicators, and a clean responsive UI. Built with JWT authentication and persistent message history.",
     tags: ["React", "TypeScript", "Node.js", "Socket.io", "TailwindCSS", "MongoDB"],
-    image: "/images/chatty.png",
-    imageAlt: "Chatty chat application screenshot",
+    image: "/images/chatty-new.png",
+    imageAlt: "Chatty real-time chat application",
     liveUrl: "https://chatty-ze95.onrender.com/",
     repoUrl: "https://github.com/kevjiang64/Chatty",
   },
