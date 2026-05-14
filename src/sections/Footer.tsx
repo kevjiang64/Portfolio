@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -18,7 +18,7 @@ const LinkedInIcon = () => (
   </svg>
 );
 
-const ICONS: Record<string, () => JSX.Element> = {
+const ICONS: Record<string, () => React.ReactElement> = {
   GitHub: GitHubIcon,
   LinkedIn: LinkedInIcon,
 };
